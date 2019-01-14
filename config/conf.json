@@ -18,7 +18,7 @@
       "type": "ruby",
       "user": "nobody",
       "processes": 2,
-      "script": "/usr/share/doc/unit-ruby/examples/ruby-app.ru"
+      "script": "/var/www/ruby/ruby-app.ru"
     }
   }
 }
