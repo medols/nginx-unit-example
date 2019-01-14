@@ -1,8 +1,8 @@
-require_relative './app_def'
+require_relative './ruby-app'
 
 app = Proc.new do |env|
     params=env["rack.input"].read.split(',').map(&:to_i)
-    result=app_def *params
+    result=ruby_app *params
     ['200', {
         'Content-Type' => 'text/plain',
     }, ["#{result}\n"] ]

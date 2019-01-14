@@ -1,3 +1,3 @@
-def app_def *params
+def ruby_app *params
   params.inject(:+)
 end

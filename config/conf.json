@@ -1,20 +1,11 @@
 {
   "listeners": {
-    "*:8081": {
-      "application": "helloPython"
-    },
     "*:8700": {
-      "application": "example_ruby"
+      "application": "ruby_app"
     }
   },
   "applications": {
-    "helloPython": {
-      "type": "python",
-      "processes": 2,
-      "path": "/var/www/python",
-      "module": "wsgi"
-    },
-    "example_ruby": {
+    "ruby_app": {
       "type": "ruby",
       "user": "nobody",
       "processes": 2,

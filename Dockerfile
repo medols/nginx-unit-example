@@ -10,9 +10,10 @@ RUN apt-key add nginx_signing.key && \
         apt-get -y update && \
         apt-get -y install \
 			unit=$VERSION \
-			unit-python2.7=$VERSION \
 			unit-ruby=$VERSION
 
 COPY config/conf.json /var/lib/unit/
+
+COPY www/ruby/* /var/www/ruby/
 
 CMD ["/usr/sbin/unitd", "--no-daemon", "--control", "0.0.0.0:8080"]
